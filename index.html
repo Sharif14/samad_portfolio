@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Md Sharif Samad</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0d1117;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #0d1117;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #00aaff;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 60px;
+      min-height: 90vh;
+      background: linear-gradient(to right, #0d1117, #111827);
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text h1 span {
+      color: #00aaff;
+    }
+
+    .hero-text p {
+      max-width: 500px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 2px solid #00aaff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #00aaff;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #0088cc;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #00aaff;
+    }
+
+    .btn-outline:hover {
+      background: #00aaff;
+      color: #fff;
+    }
+
+    .hero-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-img img {
+      max-width: 350px;
+      border-radius: 10px;
+    }
+
+
+    /* About Section */
+    .about {
+      padding: 60px;
+      background: #111827;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .about h2 span {
+      color: #00aaff;
+    }
+
+    .about-img {
+      margin: 20px auto;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #00aaff;
+      overflow: hidden;
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 20px auto;
+      color: #bbb;
+    }
+
+    .about .btn {
+      margin-top: 20px;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      color: #00aaff;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+  </style>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0f1c;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skills-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .skills-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .skills-section h2 span {
+      color: #00bfff;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .skills-column h3 {
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #00bfff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+
+    .progress-bar {
+      background: #1c2233;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 8px;
+    }
+
+    .progress {
+      height: 8px;
+      background: #00bfff;
+      border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .skills-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0f1c;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .journey-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .journey-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .journey-section h2 span {
+      color: #00bfff;
+    }
+
+    .journey-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .journey-column h3 {
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #00bfff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .journey-box {
+      border: 1px solid #00bfff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .journey-box::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      width: 12px;
+      height: 12px;
+      background: #00bfff;
+      border-radius: 50%;
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #00bfff;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      .journey-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* ===== CONTACT FORM ===== */
+    .contact form {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+    .contact .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .contact input, .contact textarea {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact textarea {
+      width: 100%;
+    }
+    .contact button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #00c3ff;
+      color: #fff;
+      cursor: pointer;
+    }
+    .contact button:hover {
+      background: #008fbf;
+    }
+    .contact-text{
+      text-align: center;
+    }
+    span{
+      color: #00bfff;
+    }
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #132b45;
+      font-size: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .contact .row {
+        flex-direction: column;
+      }
+      .contact input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style> 
+  <style>
+    .showcase-section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .showcase-title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .showcase-subtext {
+      font-size: 1rem;
+      color: #666;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      line-height: 1.5;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .showcase-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .showcase-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .showcase-name {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+
+    .showcase-price {
+      color: #444;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .showcase-btn {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      background: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .showcase-btn:hover {
+      background: #333;
+      color: white;
+    }
+
+    .showcase-footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+  </head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Md Sharif Samad.</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Md Sharif Samad</span><br>Junior Frontend Developer & Graphics Designer</h1>
+      <p><Span>JavaScript</Span> || <Span>HTML</Span> || <Span>CSS</Span> || <Span>Photoshop</Span> || <Span>Illustrator</Span> || <Span>Framer</Span> || <Span>Blender </Span>|| <Span>GitHub</Span> || <Span>Figma</Span> || <Span>Microsoft Office </Span> || <span>IOT</span></p>
+      <div class="btn-group">
+        <a href="https://www.behance.net/mdsharifsamad15" class="btn btn-primary">Hire Me</a>
+        <a href="https://wa.me/qr/5F5FZW467NHKK1" class="btn btn-outline">Let's Talk</a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/Sharif14"><i class="fab fa-facebook"></i> GitHub |</a>
+        <a href="https://www.facebook.com/samad.rifat.31/"><i class="fab fa-twitter"></i> Facebook |</a>
+        <a href="https://www.linkedin.com/in/md-sahrif-samad-291407271/?jobid=1234"><i class="fab fa-linkedin"></i> Linkedin |</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <img src="https://i.ibb.co.com/Vc9nGLnW/Picsart-25-09-25-02-42-32-670.png" alt="Picsart-25-09-25-02-42-32-670" border="0">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About <span>Me</span></h2>
+    <div class="about-img">
+      <img src="https://i.ibb.co.com/Vc9nGLnW/Picsart-25-09-25-02-42-32-670.png" alt="Picsart-25-09-25-02-42-32-670" border="0">
+    </div>
+    <h3>Frontend Developer || Graphics Designer</h3>
+    <p>I am a self-motivated Graphics Designer & Junior Frontend Developer. Passionate about quality design & code, the best practices and clean, minimal interfaces. I am an enthusiastic individual and consider myself very adaptable to any given situation. In addition, I am very good at time management and love working with a team and I believe I would be an excellent addition to company.</p>
+    <a href="https://www.behance.net/mdsharifsamad15" class="btn btn-primary">Read More</a>
+  </section>
+  <section class="journey-section">
+    <h2>My <span>Journey</span></h2>
+    <div class="journey-container">
+      
+      <!-- Education Column -->
+      <div class="journey-column">
+        <h3>Education</h3>
+        
+        <div class="journey-box">
+          <span class="date">2024 - 2025</span>
+          <div class="title">M.SC in Computer Science and Engineering - BGC Trust University Bangladesh</div>
+          <p class="description">
+            CGPA : 3.00
+          </p>
+        </div>
+
+        <div class="journey-box">
+          <span class="date">2019 - 2023</span>
+          <div class="title">B.SC(Hon's) in Computer Science and Engineering - BGC Trust University Bangladesh</div>
+          <p class="description">
+            CGPA : 3.14
+          </p>
+        </div>
+
+        <div class="journey-box">
+          <span class="date">2018 - 2019</span>
+          <div class="title">Higher Secondary Certificate (H.S.C.) - Chittagong Ideal College</div>
+          <p class="description">
+            Group : Science <br>
+            GPA : 2.92
+          </p>
+        </div>
+      </div>
+
+      <!-- Experience Column -->
+      <div class="journey-column">
+        <h3>Experience</h3>
+        
+        <div class="journey-box">
+          <span class="date">2024 - Till Now</span>
+          <div class="title">Project Manager - DreamWeave Stations</div>
+          <p class="description">
+            Alhamdulillah. I successfully got promotion at DreamWeave Stations as a Project Manager
+          </p>
+        </div>
+
+        <div class="journey-box">
+          <span class="date">2023 - 2024</span>
+          <div class="title">Junior Frontend Developer - DreamWeave Stations</div>
+          <p class="description">
+            Alhamdulillah. I successfully got promotion at DreamWeave Stations as a Frontend Developer 
+          </p>
+        </div>
+
+        <div class="journey-box">
+          <span class="date">2022 - 2023</span>
+          <div class="title">Graphics Designer - DreamWeave Stations</div>
+          <p class="description">
+            Alhamdulillah. I successfully appointed at DreamWeave Stations as a Graphics Designer
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="skills-section">
+    <h2>My <span>Skills</span></h2>
+    <div class="skills-container">
+
+      <!-- Coding Skills -->
+      <div class="skills-column">
+        <h3>Coding Skills</h3>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>HTML</span>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>CSS</span>
+            <span>80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>JavaScript</span>
+            <span>65%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Python</span>
+            <span>78%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 78%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Skills -->
+      <div class="skills-column">
+        <h3>Professional Skills</h3>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Web Design</span>
+            <span>95%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 95%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Web Development</span>
+            <span>67%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 67%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Graphic Design</span>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>SEO Marketing</span>
+            <span>60%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="showcase-section">
+    <h2 class="showcase-title"> Work <span>Portfolio</span></h2>
+    <p class="showcase-subtext">
+      I have added some samples of my work here. <br> <span>Thank You</span>
+    </p>
+
+    <div class="showcase-grid">
+      <div class="showcase-card">
+        <img src="https://i.ibb.co.com/ym81cgqT/ecommerce-01.jpg" alt="ecommerce-01">
+        <h3 class="showcase-name">Android APP UI Design</h3>
+        <p class="showcase-price">$4.50</p>
+        <button class="showcase-btn">Read More</button>
+      </div>
+
+      <div class="showcase-card">
+        <img src="https://i.ibb.co.com/cKLWSYRH/1431-01.png" alt="1431-01">
+        <h3 class="showcase-name">Poster Design</h3>
+        <p class="showcase-price">$7.25</p>
+        <button class="showcase-btn">Read More</button>
+      </div>
+
+      <div class="showcase-card">
+        <img src="https://i.ibb.co.com/zVpFfGcP/LSBU-Deliver-01.png" alt="LSBU-Deliver-01">
+        <h3 class="showcase-name">Web Development</h3>
+        <p class="showcase-price">$4.75</p>
+        <button class="showcase-btn">Read More</button>
+      </div>
+
+      <div class="showcase-card">
+        <img src="https://i.ibb.co.com/hRrgZcrq/haya-da-01.jpg" alt="haya-da-01">
+        <h3 class="showcase-name">UI Design</h3>
+        <p class="showcase-price">$4.25</p>
+        <button class="showcase-btn">Read More</button>
+      </div>
+
+      <div class="showcase-card">
+        <img src="https://i.ibb.co.com/Z1LXtRVN/SCARLET-2-updated-png-02.jpg" alt="SCARLET-2-updated-png-02">
+        <h3 class="showcase-name">Logo Design</h3>
+        <p class="showcase-price">$5.50</p>
+        <button class="showcase-btn">Read More</button>
+      </div>
+
+      <div class="showcase-card">
+        <img src="https://i.ibb.co.com/j9m1k5JJ/ZOOM-01-version-1.jpg" alt="ZOOM-01-version-1">
+        <h3 class="showcase-name">Logo Design</h3>
+        <p class="showcase-price">$4.50</p>
+        <button class="showcase-btn">Read More</button>
+      </div>
+    </div>
+  </section>
+  <!-- ===== Contact Section ===== -->
+  <section class="contact">
+    <h1 class="contact-text">Contact <span>Me!</span></h1>
+    <form id="contactForm">
+      <div class="row">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+      </div>
+      <div class="row">
+        <input type="text" id="phone" placeholder="Mobile Number" required>
+        <input type="text" id="subject" placeholder="Email Subject" required>
+      </div>
+      <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Submit</button>
+    </form>       
+  </section>
+  <!-- Load EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("gPgrfX35WHmmRSEpm"); // Replace with your EmailJS Public Key
+  })();
+</script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const params = {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_3pkgb4g", "template_ggruae4", params, "gPgrfX35WHmmRSEpm")
+      .then(function(response) {
+        alert("✅ Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      }, function(error) {
+        alert("❌ Failed to send message. Please try again.");
+        console.error(error);
+      });
+  });
+</script>
+<footer>
+  <p>Copyright © 2025 by DreamWeave Stations | All Rights Reserved.</p>
+</footer>
+</body>
+</html>
