@@ -400,6 +400,98 @@
         align-items: center;
       }
     }
+    /* Tablets */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-text {
+    margin-bottom: 30px;
+  }
+
+  .hero-img img {
+    max-width: 280px;
+  }
+
+  .journey-container,
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Mobiles */
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about h2 {
+    font-size: 22px;
+  }
+
+  .skills-section h2,
+  .journey-section h2,
+  .showcase-title {
+    font-size: 1.8rem;
+  }
+
+  .journey-box {
+    padding: 15px;
+  }
+
+  .skills-column h3 {
+    font-size: 1.2rem;
+  }
+
+  .showcase-card img {
+    height: 160px;
+  }
+
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
   </style> 
   <style>
     .showcase-section {
@@ -492,7 +584,7 @@
     <nav>
       <ul>
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li id="about"><a href="#about">About</a></li>
         <li><a href="#">Education</a></li>
         <li><a href="#">Skills</a></li>
         <li><a href="#">Contact</a></li>
@@ -507,7 +599,7 @@
       <p><Span>JavaScript</Span> || <Span>HTML</Span> || <Span>CSS</Span> || <Span>Photoshop</Span> || <Span>Illustrator</Span> || <Span>Framer</Span> || <Span>Blender </Span>|| <Span>GitHub</Span> || <Span>Figma</Span> || <Span>Microsoft Office </Span> || <span>IOT</span></p>
       <div class="btn-group">
         <a href="https://www.behance.net/mdsharifsamad15" class="btn btn-primary">Hire Me</a>
-        <a href="https://wa.me/qr/5F5FZW467NHKK1" class="btn btn-outline">Let's Talk</a>
+        <a href="https://www.facebook.com/samad.rifat.31/" class="btn btn-outline">Let's Talk</a>
       </div>
 
       <!-- Social Links -->
